@@ -434,12 +434,12 @@ public class FPSChanger : MonoBehaviour{
 		GameObject cur_fps = CurrentGameState == GameStates.Learning ?
 			FPSControllers[LearningWorldOrder[m_currFPSIndex]] : FPSControllers[TestingWorldOrder[m_currFPSIndex]];
 
-		UnityStandardAssets.Characters.FirstPerson.FirstPersonController fpsc = (cur_fps.GetComponent<
-				UnityStandardAssets.Characters.FirstPerson.FirstPersonController>());
+		SimpleMovement fpsc = (cur_fps.GetComponent<SimpleMovement>());
 
 		//Reset the rotation ourselves because the mouselook script on the FPSC overrides it
+		//(Disabled for simple movement)
 		if(once){
-			fpsc.SetRotation(fpsc.transform.rotation);
+			//fpsc.SetRotation(fpsc.transform.rotation);
 		}
 
 		fpsc.enabled = true;
@@ -451,8 +451,7 @@ public class FPSChanger : MonoBehaviour{
 		GameObject cur_fps = isLearning ?
 			FPSControllers[LearningWorldOrder[m_currFPSIndex]] : FPSControllers[TestingWorldOrder[m_currFPSIndex]];
 
-		((MonoBehaviour)cur_fps.GetComponent<
-		 UnityStandardAssets.Characters.FirstPerson.FirstPersonController>()).enabled = false;
+		((MonoBehaviour)cur_fps.GetComponent<SimpleMovement>()).enabled = false;
 	}
 
 	//We should start showing the image referenced by

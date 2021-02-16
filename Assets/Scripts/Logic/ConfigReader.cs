@@ -54,10 +54,11 @@ public class ConfigReader : MonoBehaviour{
 				//Read Movement Speed
 				line = reader.ReadLine();
 				float speed = float.Parse(line);
-				foreach(UnityStandardAssets.Characters.FirstPerson.FirstPersonController  fpsc in
-						Resources.FindObjectsOfTypeAll(typeof(UnityStandardAssets.Characters.FirstPerson.FirstPersonController))
-						as UnityStandardAssets.Characters.FirstPerson.FirstPersonController[]){
-					fpsc.SetMovementSpeed(speed);
+				foreach(SimpleMovement fpsc in
+						Resources.FindObjectsOfTypeAll(typeof(SimpleMovement))
+						as SimpleMovement[])
+				{
+					fpsc.moveSpeed = speed;
 				}
 
 				//Are we in learning, testing, or free roam mode?
