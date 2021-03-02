@@ -1,6 +1,2 @@
 # PrestonTests
-Branches:
-  master
-    Unity version: 5.0.0f4
-  simple-movement
-    Unity version: 2018.4.29f1
+Branches: master (Unity 5.0.0f4), simple-movement (Unity 2018.4.29f1)
