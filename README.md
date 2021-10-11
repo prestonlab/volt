@@ -36,9 +36,13 @@ Requirements for the experiment:
 - [Python 2.7](https://www.python.org/downloads/release/python-2718/) - Python 2 is used to label data from Unity trials. Python isn't strictly necessary to run the experiment.
 - [Psych Toolbox](http://psychtoolbox.org/) - Used to run some of the experiment tasks. 
 
+Though the software is largely built in Unity, to interact with this repository you will only need to use MATLAB, Python, and Psych Toolbox. The Unity build that is in this repository was tested on 13'' Macbook Airs using **MacOS Sierra** (10.12.6) and **El Capitan** (v10.11.6) with a display resolution of 1440x900. 
+
 ### Running the Experiment
 
-First off, clone this repository to your local machine and open `MATLAB` to create the header for your experiment. There is also a copy of the below instructions in this repository as a word document in `documents/volt_experimenter_instructions`. You will also find some other helpful documents such as questionnaires and participant instructions. 
+First off, clone this repository to your local machine and open `MATLAB` to create the header for your experiment. Next, make sure to unzip `Build.zip`. You can leave it in the same directory as the zip file. This contains the Unity build needed to run this experiemnt. 
+
+There is also a copy of the below instructions in this repository as a word document in `documents/volt_experimenter_instructions`. You will also find some other helpful documents such as questionnaires and participant instructions. 
 
 #### Setting up the Header
 In `MATLAB`, make sure to change to the directory of where you cloned this repo. For example, 
